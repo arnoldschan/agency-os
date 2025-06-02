@@ -1,0 +1,11 @@
+services:
+  nuxt-app:
+    image: ghcr.io/arnoldschan/agencyos:latest  # Replace with your actual image
+    container_name: nuxt-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DIRECTUS_SERVER_TOKEN: ${DIRECTUS_SERVER_TOKEN}
+      DIRECTUS_URL: ${DIRECTUS_URL}
+      SITE_URL: ${SITE_URL}
