@@ -38,12 +38,12 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/image:${{ github.sha }}
-            ghcr.io/${{ github.repository }}/image:latest
+            agencyos/image:latest
           build-args: |
             DIRECTUS_SERVER_TOKEN=${{ secrets.DIRECTUS_SERVER_TOKEN }}
             DIRECTUS_URL=${{ secrets.DIRECTUS_URL }}
             SITE_URL=${{ secrets.SITE_URL }}
+          
 
   # Deployment job
   deploy:
