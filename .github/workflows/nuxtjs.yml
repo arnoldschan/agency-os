@@ -37,6 +37,9 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/image:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/image:latest
 
   # Deployment job
   deploy:
